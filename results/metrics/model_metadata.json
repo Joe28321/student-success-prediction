@@ -1,0 +1,362 @@
+{
+  "artifact_id": "c05f78cc-187d-420b-b3fc-c38b476b346f",
+  "created_at_utc": "2026-10-18T17:34:13.469937+00:00",
+  "model_file": "C:\\Users\\user\\AppData\\Local\\Temp\\opencode\\student-success-predictor\\models\\best_model.joblib",
+  "best_model": "Random Forest",
+  "selection_rule": "highest F1 (positive class = at_risk) on the held-out test split; tuning itself used training data only (5-fold CV)",
+  "primary_scenario": "early",
+  "scenario_labels": {
+    "early": "PRIMARY early-prediction: no grade features (G1/G2/G3 excluded)",
+    "midterm": "OPTIONAL: includes G1/G2 - NOT comparable to the primary scenario"
+  },
+  "target_definition": "A student is labelled at_risk when the final grade G3 < 10 (on the 0-20 scale), and not_at_risk when G3 >= 10. This threshold is a project-defined operational rule based on the dataset's grading scale (10 is the pass mark in the Portuguese system), not a universal definition of academic risk.",
+  "positive_class": "at_risk",
+  "class_names": [
+    "not_at_risk",
+    "at_risk"
+  ],
+  "random_seed": 42,
+  "test_size": 0.2,
+  "cv_folds": 5,
+  "class_weight_balanced": true,
+  "excluded_columns": [
+    "G1",
+    "G2",
+    "G3"
+  ],
+  "feature_schema": {
+    "features": [
+      "school",
+      "sex",
+      "age",
+      "address",
+      "famsize",
+      "Pstatus",
+      "Medu",
+      "Fedu",
+      "Mjob",
+      "Fjob",
+      "reason",
+      "guardian",
+      "traveltime",
+      "studytime",
+      "failures",
+      "schoolsup",
+      "famsup",
+      "paid",
+      "activities",
+      "nursery",
+      "higher",
+      "internet",
+      "romantic",
+      "famrel",
+      "freetime",
+      "goout",
+      "Dalc",
+      "Walc",
+      "health",
+      "absences"
+    ],
+    "numeric": [
+      "age",
+      "Medu",
+      "Fedu",
+      "traveltime",
+      "studytime",
+      "failures",
+      "famrel",
+      "freetime",
+      "goout",
+      "Dalc",
+      "Walc",
+      "health",
+      "absences"
+    ],
+    "categorical": [
+      "school",
+      "sex",
+      "address",
+      "famsize",
+      "Pstatus",
+      "Mjob",
+      "Fjob",
+      "reason",
+      "guardian",
+      "schoolsup",
+      "famsup",
+      "paid",
+      "activities",
+      "nursery",
+      "higher",
+      "internet",
+      "romantic"
+    ]
+  },
+  "categorical_values": {
+    "school": [
+      "GP",
+      "MS"
+    ],
+    "sex": [
+      "F",
+      "M"
+    ],
+    "address": [
+      "R",
+      "U"
+    ],
+    "famsize": [
+      "GT3",
+      "LE3"
+    ],
+    "Pstatus": [
+      "A",
+      "T"
+    ],
+    "Mjob": [
+      "at_home",
+      "health",
+      "other",
+      "services",
+      "teacher"
+    ],
+    "Fjob": [
+      "at_home",
+      "health",
+      "other",
+      "services",
+      "teacher"
+    ],
+    "reason": [
+      "course",
+      "home",
+      "other",
+      "reputation"
+    ],
+    "guardian": [
+      "father",
+      "mother",
+      "other"
+    ],
+    "schoolsup": [
+      "no",
+      "yes"
+    ],
+    "famsup": [
+      "no",
+      "yes"
+    ],
+    "paid": [
+      "no",
+      "yes"
+    ],
+    "activities": [
+      "no",
+      "yes"
+    ],
+    "nursery": [
+      "no",
+      "yes"
+    ],
+    "higher": [
+      "no",
+      "yes"
+    ],
+    "internet": [
+      "no",
+      "yes"
+    ],
+    "romantic": [
+      "no",
+      "yes"
+    ]
+  },
+  "numeric_ranges": {
+    "age": [
+      15.0,
+      22.0
+    ],
+    "Medu": [
+      0.0,
+      4.0
+    ],
+    "Fedu": [
+      0.0,
+      4.0
+    ],
+    "traveltime": [
+      1.0,
+      4.0
+    ],
+    "studytime": [
+      1.0,
+      4.0
+    ],
+    "failures": [
+      0.0,
+      3.0
+    ],
+    "famrel": [
+      1.0,
+      5.0
+    ],
+    "freetime": [
+      1.0,
+      5.0
+    ],
+    "goout": [
+      1.0,
+      5.0
+    ],
+    "Dalc": [
+      1.0,
+      5.0
+    ],
+    "Walc": [
+      1.0,
+      5.0
+    ],
+    "health": [
+      1.0,
+      5.0
+    ],
+    "absences": [
+      0.0,
+      75.0
+    ]
+  },
+  "cv_results": {
+    "Logistic Regression": {
+      "best_params": {
+        "classifier__C": 10.0
+      },
+      "best_cv_f1": 0.5538217604046402,
+      "n_cv_fits": 15,
+      "cv_folds": 5,
+      "scoring": "f1 (positive class = at_risk)",
+      "tuning_seconds": 3.92
+    },
+    "Decision Tree": {
+      "best_params": {
+        "classifier__max_depth": 5,
+        "classifier__min_samples_leaf": 20
+      },
+      "best_cv_f1": 0.5475234441602728,
+      "n_cv_fits": 60,
+      "cv_folds": 5,
+      "scoring": "f1 (positive class = at_risk)",
+      "tuning_seconds": 0.54
+    },
+    "Random Forest": {
+      "best_params": {
+        "classifier__max_depth": 5,
+        "classifier__min_samples_leaf": 5,
+        "classifier__n_estimators": 200
+      },
+      "best_cv_f1": 0.5287964068451874,
+      "n_cv_fits": 60,
+      "cv_folds": 5,
+      "scoring": "f1 (positive class = at_risk)",
+      "tuning_seconds": 4.3
+    }
+  },
+  "permutation_importance": {
+    "scoring": "f1 (positive class = at_risk)",
+    "n_repeats": 10,
+    "note": "computed on the held-out test split; associations only, NOT proof of causation",
+    "top_features": [
+      {
+        "feature": "failures",
+        "importance_mean": 0.0836,
+        "importance_std": 0.0343
+      },
+      {
+        "feature": "goout",
+        "importance_mean": 0.075,
+        "importance_std": 0.0351
+      },
+      {
+        "feature": "sex",
+        "importance_mean": 0.032,
+        "importance_std": 0.0325
+      },
+      {
+        "feature": "age",
+        "importance_mean": 0.0287,
+        "importance_std": 0.0253
+      },
+      {
+        "feature": "famsize",
+        "importance_mean": 0.0253,
+        "importance_std": 0.0232
+      },
+      {
+        "feature": "guardian",
+        "importance_mean": 0.0231,
+        "importance_std": 0.022
+      },
+      {
+        "feature": "Fedu",
+        "importance_mean": 0.0223,
+        "importance_std": 0.0257
+      },
+      {
+        "feature": "famsup",
+        "importance_mean": 0.0221,
+        "importance_std": 0.0155
+      },
+      {
+        "feature": "absences",
+        "importance_mean": 0.0163,
+        "importance_std": 0.0254
+      },
+      {
+        "feature": "Walc",
+        "importance_mean": 0.0119,
+        "importance_std": 0.0149
+      },
+      {
+        "feature": "romantic",
+        "importance_mean": 0.0119,
+        "importance_std": 0.0157
+      },
+      {
+        "feature": "schoolsup",
+        "importance_mean": 0.0094,
+        "importance_std": 0.0143
+      },
+      {
+        "feature": "Pstatus",
+        "importance_mean": 0.005,
+        "importance_std": 0.0103
+      },
+      {
+        "feature": "reason",
+        "importance_mean": 0.004,
+        "importance_std": 0.0113
+      },
+      {
+        "feature": "Fjob",
+        "importance_mean": 0.0038,
+        "importance_std": 0.0138
+      }
+    ]
+  },
+  "env": {
+    "python": "3.13.5",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "sklearn": "1.9.1",
+    "pandas": "3.0.2",
+    "numpy": "2.3.4"
+  },
+  "n_train": 316,
+  "n_test": 79,
+  "class_balance_train": {
+    "not_at_risk": 212,
+    "at_risk": 104
+  },
+  "class_balance_test": {
+    "not_at_risk": 53,
+    "at_risk": 26
+  }
+}

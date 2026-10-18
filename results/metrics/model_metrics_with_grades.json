@@ -1,0 +1,83 @@
+[
+  {
+    "accuracy": 0.8734177215,
+    "precision_positive": 0.7352941176,
+    "recall_positive": 0.9615384615,
+    "f1_positive": 0.8333333333,
+    "confusion_matrix": {
+      "labels": [
+        "not_at_risk",
+        "at_risk"
+      ],
+      "matrix": [
+        [
+          44,
+          9
+        ],
+        [
+          1,
+          25
+        ]
+      ]
+    },
+    "n_test": 79,
+    "predict_test_seconds": 0.007,
+    "model": "Decision Tree",
+    "train_seconds": 0.5,
+    "roc_auc": 0.9441219158
+  },
+  {
+    "accuracy": 0.8734177215,
+    "precision_positive": 0.7352941176,
+    "recall_positive": 0.9615384615,
+    "f1_positive": 0.8333333333,
+    "confusion_matrix": {
+      "labels": [
+        "not_at_risk",
+        "at_risk"
+      ],
+      "matrix": [
+        [
+          44,
+          9
+        ],
+        [
+          1,
+          25
+        ]
+      ]
+    },
+    "n_test": 79,
+    "predict_test_seconds": 0.0226,
+    "model": "Random Forest",
+    "train_seconds": 4.48,
+    "roc_auc": 0.9368650218
+  },
+  {
+    "accuracy": 0.8734177215,
+    "precision_positive": 0.75,
+    "recall_positive": 0.9230769231,
+    "f1_positive": 0.8275862069,
+    "confusion_matrix": {
+      "labels": [
+        "not_at_risk",
+        "at_risk"
+      ],
+      "matrix": [
+        [
+          45,
+          8
+        ],
+        [
+          2,
+          24
+        ]
+      ]
+    },
+    "n_test": 79,
+    "predict_test_seconds": 0.0072,
+    "model": "Logistic Regression",
+    "train_seconds": 3.66,
+    "roc_auc": 0.9477503628
+  }
+]

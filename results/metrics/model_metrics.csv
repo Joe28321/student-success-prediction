@@ -1,0 +1,4 @@
+model,accuracy,precision_positive,recall_positive,f1_positive,roc_auc,train_seconds,predict_test_seconds
+Random Forest,0.6962,0.5417,0.5,0.52,0.6444,4.3,0.0141
+Logistic Regression,0.5823,0.3871,0.4615,0.4211,0.5936,3.92,0.0066
+Decision Tree,0.5823,0.3871,0.4615,0.4211,0.5671,0.54,0.0069

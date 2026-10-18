@@ -1,0 +1,83 @@
+[
+  {
+    "accuracy": 0.6962025316,
+    "precision_positive": 0.5416666667,
+    "recall_positive": 0.5,
+    "f1_positive": 0.52,
+    "confusion_matrix": {
+      "labels": [
+        "not_at_risk",
+        "at_risk"
+      ],
+      "matrix": [
+        [
+          42,
+          11
+        ],
+        [
+          13,
+          13
+        ]
+      ]
+    },
+    "n_test": 79,
+    "predict_test_seconds": 0.0141,
+    "model": "Random Forest",
+    "train_seconds": 4.3,
+    "roc_auc": 0.6444121916
+  },
+  {
+    "accuracy": 0.582278481,
+    "precision_positive": 0.3870967742,
+    "recall_positive": 0.4615384615,
+    "f1_positive": 0.4210526316,
+    "confusion_matrix": {
+      "labels": [
+        "not_at_risk",
+        "at_risk"
+      ],
+      "matrix": [
+        [
+          34,
+          19
+        ],
+        [
+          14,
+          12
+        ]
+      ]
+    },
+    "n_test": 79,
+    "predict_test_seconds": 0.0066,
+    "model": "Logistic Regression",
+    "train_seconds": 3.92,
+    "roc_auc": 0.5936139332
+  },
+  {
+    "accuracy": 0.582278481,
+    "precision_positive": 0.3870967742,
+    "recall_positive": 0.4615384615,
+    "f1_positive": 0.4210526316,
+    "confusion_matrix": {
+      "labels": [
+        "not_at_risk",
+        "at_risk"
+      ],
+      "matrix": [
+        [
+          34,
+          19
+        ],
+        [
+          14,
+          12
+        ]
+      ]
+    },
+    "n_test": 79,
+    "predict_test_seconds": 0.0069,
+    "model": "Decision Tree",
+    "train_seconds": 0.54,
+    "roc_auc": 0.56712627
+  }
+]

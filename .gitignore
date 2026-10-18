@@ -1,0 +1,20 @@
+# Virtual environment
+.venv/
+
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Streamlit secrets (never commit credentials)
+.streamlit/secrets.toml
+
+# OS junk
+Thumbs.db
+desktop.ini
+
+# NOTE on artifacts:
+# Deploying to Streamlit Community Cloud: the app needs the trained model and
+# result artifacts to work. The raw dataset auto-downloads from the official
+# UCI source on first run, so only these small generated files (all <1 MB)
+# are committed here - they are outputs of our own verified experiments.
+# To go back to a clean repo, regenerate everything with: python -m src.train
